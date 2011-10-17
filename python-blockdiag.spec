@@ -4,13 +4,13 @@
 %define 	module	blockdiag
 Summary:	Blockdiag generate block-diagram image file from spec-text file.
 Name:		python-%module
-Version:	0.9.3
+Version:	0.9.4
 Release:	0.1
 License:	Apache 2.0
 Group:		Development/Languages
 URL:		http://blockdiag.com/en/blockdiag/index.html
-Source0:	https://bitbucket.org/tk0miya/%{module}/get/%{version}.tar.gz
-# Source0-md5:	f151a3c21bbfd2606fbad0d37e190e58
+Source0:	http://pypi.python.org/packages/source/b/%{module}/%{module}-%{version}.tar.gz
+# Source0-md5:	f60754f3b314d9d4c678b8f764b8a355
 #BuildRequires:	python < 3.0
 BuildRequires:	python-funcparserlib >= 0.3.4
 BuildRequires:	rpmbuild(macros) >= 1.219
@@ -29,7 +29,7 @@ Features
 You can get some examples and generated images on blockdiag.com .
 
 %prep
-%setup -q -n tk0miya-%{module}-%{version}
+%setup -q -n %{module}-%{version}
 %{__sed} -i -e 's/^from ez_setup/#from ez_setup/' setup.py
 %{__sed} -i -e 's/^use_setuptools()/#use_setuptools()/' setup.py
 
@@ -53,6 +53,7 @@ rm -rf $RPM_BUILD_ROOT
 
 %files
 %defattr(644,root,root,755)
+%attr(755,root,root)%{_bindir}/blockdiag
 #%doc README
 %{py_sitescriptdir}/%{module}
 %if "%{py_ver}" > "2.4"
