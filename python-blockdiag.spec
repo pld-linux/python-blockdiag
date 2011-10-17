@@ -38,11 +38,6 @@ rm -rf $RPM_BUILD_ROOT
 	--skip-build \
 	--root $RPM_BUILD_ROOT
 
-%py_postclean
-
-%{__rm} -r $RPM_BUILD_ROOT%{py_sitescriptdir}/%{module}/tests
-%{__rm} -r $RPM_BUILD_ROOT%{py_sitescriptdir}/tests
-
 %clean
 rm -rf $RPM_BUILD_ROOT
 
