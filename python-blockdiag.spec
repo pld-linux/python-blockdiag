@@ -14,7 +14,7 @@ BuildRequires:	rpmbuild(macros) >= 1.219
 BuildRequires:	sed >= 4.0
 #Requires:	python-django
 Requires:	python-webcolors >= 1.3.1
-Requires:	python-devel-tools  ##  for pdb module.
+Requires:	python-devel-tools
 BuildArch:	noarch
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
