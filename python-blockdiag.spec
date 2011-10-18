@@ -12,10 +12,10 @@ Source0:	http://pypi.python.org/packages/source/b/%{module}/%{module}-%{version}
 BuildRequires:	rpmbuild(macros) >= 1.219
 BuildRequires:	sed >= 4.0
 Requires:	python-PIL
-Requires:	python-setuptools
-Requires:	python-webcolors >= 1.3.1
 Requires:	python-devel-tools
 Requires:	python-funcparserlib
+Requires:	python-setuptools
+Requires:	python-webcolors >= 1.3.1
 BuildArch:	noarch
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
@@ -54,7 +54,7 @@ rm -rf $RPM_BUILD_ROOT
 %files
 %defattr(644,root,root,755)
 %attr(755,root,root) %{_bindir}/%{module}
-%attr(644,root,root) %{_mandir}/man1/%{module}.1*
+%{_mandir}/man1/%{module}.1*
 %{py_sitescriptdir}/%{module}
 %if "%{py_ver}" > "2.4"
 %{py_sitescriptdir}/%{module}-%{version}-*.egg-info
