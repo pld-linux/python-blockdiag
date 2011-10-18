@@ -41,7 +41,7 @@ rm -rf $RPM_BUILD_ROOT
 	--skip-build \
 	--root $RPM_BUILD_ROOT
 
-%{__rm} $RPM_BUILD_ROOT/%{py_sitescriptdir}/%{module}_sphinxhelper.*
+%{__rm} $RPM_BUILD_ROOT%{py_sitescriptdir}/%{module}_sphinxhelper.*
 
 install -d $RPM_BUILD_ROOT%{_mandir}/man1
 cp -p %{module}.1 $RPM_BUILD_ROOT%{_mandir}/man1
