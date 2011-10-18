@@ -43,6 +43,8 @@ rm -rf $RPM_BUILD_ROOT
 
 %py_postclean
 
+%{__rm} $RPM_BUILD_ROOT/%{py_sitescriptdir}/%{module}_sphinxhelper.*
+
 %clean
 rm -rf $RPM_BUILD_ROOT
 
@@ -50,7 +52,6 @@ rm -rf $RPM_BUILD_ROOT
 %defattr(644,root,root,755)
 %attr(755,root,root) %{_bindir}/blockdiag
 %{py_sitescriptdir}/%{module}
-%{py_sitescriptdir}/%{module}_sphinxhelper.*
 %if "%{py_ver}" > "2.4"
 %{py_sitescriptdir}/%{module}-%{version}-*.egg-info
 %endif
