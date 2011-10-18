@@ -43,8 +43,8 @@ rm -rf $RPM_BUILD_ROOT
 
 %{__rm} $RPM_BUILD_ROOT/%{py_sitescriptdir}/%{module}_sphinxhelper.*
 
-install -d $RPM_BUILD_ROOT%{_mandir}/man1/
-install %{module}.1 $RPM_BUILD_ROOT%{_mandir}/man1/
+install -d $RPM_BUILD_ROOT%{_mandir}/man1
+cp -p %{module}.1 $RPM_BUILD_ROOT%{_mandir}/man1
 
 %py_postclean
 
@@ -54,7 +54,7 @@ rm -rf $RPM_BUILD_ROOT
 %files
 %defattr(644,root,root,755)
 %attr(755,root,root) %{_bindir}/%{module}
-%attr(644,root,root) %{_mandir}/man1/%{module}.*.gz
+%attr(644,root,root) %{_mandir}/man1/%{module}.1*
 %{py_sitescriptdir}/%{module}
 %if "%{py_ver}" > "2.4"
 %{py_sitescriptdir}/%{module}-%{version}-*.egg-info
