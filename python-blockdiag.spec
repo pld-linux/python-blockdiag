@@ -12,7 +12,7 @@ Source0:	http://pypi.python.org/packages/source/b/%{module}/%{module}-%{version}
 BuildRequires:	python-funcparserlib >= 0.3.4
 BuildRequires:	rpmbuild(macros) >= 1.219
 BuildRequires:	sed >= 4.0
-#Requires:	python-django
+Requires:	python-setuptools
 Requires:	python-webcolors >= 1.3.1
 Requires:	python-devel-tools
 Requires:	python-funcparserlib
