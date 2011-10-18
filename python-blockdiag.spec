@@ -15,6 +15,7 @@ BuildRequires:	sed >= 4.0
 #Requires:	python-django
 Requires:	python-webcolors >= 1.3.1
 Requires:	python-devel-tools
+Requires:	python-funcparserlib
 BuildArch:	noarch
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
