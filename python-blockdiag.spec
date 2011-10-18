@@ -9,7 +9,6 @@ URL:		http://blockdiag.com/en/blockdiag/index.html
 Source0:	http://pypi.python.org/packages/source/b/%{module}/%{module}-%{version}.tar.gz
 # Source0-md5:	f60754f3b314d9d4c678b8f764b8a355
 #BuildRequires:	python < 3.0
-BuildRequires:	python-funcparserlib >= 0.3.4
 BuildRequires:	rpmbuild(macros) >= 1.219
 BuildRequires:	sed >= 4.0
 Requires:	python-PIL
@@ -41,6 +40,8 @@ rm -rf $RPM_BUILD_ROOT
 	--optimize=2 \
 	--skip-build \
 	--root $RPM_BUILD_ROOT
+
+%py_postclean
 
 %clean
 rm -rf $RPM_BUILD_ROOT
