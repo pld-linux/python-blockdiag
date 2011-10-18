@@ -41,6 +41,9 @@ rm -rf $RPM_BUILD_ROOT
 	--skip-build \
 	--root $RPM_BUILD_ROOT
 
+install -d $RPM_BUILD_ROOT%{_mandir}/man1/
+install %{module}.1 $RPM_BUILD_ROOT%{_mandir}/man1/
+
 %py_postclean
 
 %{__rm} $RPM_BUILD_ROOT/%{py_sitescriptdir}/%{module}_sphinxhelper.*
@@ -51,6 +54,7 @@ rm -rf $RPM_BUILD_ROOT
 %files
 %defattr(644,root,root,755)
 %attr(755,root,root) %{_bindir}/blockdiag
+%attr(644,root,root) %{_mandir}/man1/*.gz
 %{py_sitescriptdir}/%{module}
 %if "%{py_ver}" > "2.4"
 %{py_sitescriptdir}/%{module}-%{version}-*.egg-info
