@@ -2,7 +2,7 @@
 Summary:	Blockdiag generate block-diagram image file from spec-text file
 Name:		python-%module
 Version:	0.9.4
-Release:	0.1
+Release:	0.2
 License:	Apache v2.0
 Group:		Development/Languages
 URL:		http://blockdiag.com/en/blockdiag/index.html
@@ -13,6 +13,8 @@ BuildRequires:	python-funcparserlib >= 0.3.4
 BuildRequires:	rpmbuild(macros) >= 1.219
 BuildRequires:	sed >= 4.0
 #Requires:	python-django
+Requires:	python-webcolors >= 1.3.1
+Requires:	python-devel-tools  ##  for pdb module.
 BuildArch:	noarch
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
