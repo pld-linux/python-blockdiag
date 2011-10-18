@@ -2,7 +2,7 @@
 Summary:	Blockdiag generate block-diagram image file from spec-text file
 Name:		python-%module
 Version:	0.9.4
-Release:	0.2
+Release:	1
 License:	Apache v2.0
 Group:		Development/Languages
 URL:		http://blockdiag.com/en/blockdiag/index.html
@@ -50,6 +50,7 @@ rm -rf $RPM_BUILD_ROOT
 %defattr(644,root,root,755)
 %attr(755,root,root) %{_bindir}/blockdiag
 %{py_sitescriptdir}/%{module}
+%{py_sitescriptdir}/%{module}_sphinxhelper.*
 %if "%{py_ver}" > "2.4"
 %{py_sitescriptdir}/%{module}-%{version}-*.egg-info
 %endif
