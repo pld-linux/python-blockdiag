@@ -8,7 +8,6 @@ Group:		Development/Languages
 URL:		http://blockdiag.com/en/blockdiag/index.html
 Source0:	http://pypi.python.org/packages/source/b/%{module}/%{module}-%{version}.tar.gz
 # Source0-md5:	f60754f3b314d9d4c678b8f764b8a355
-#BuildRequires:	python < 3.0
 BuildRequires:	rpmbuild(macros) >= 1.219
 BuildRequires:	sed >= 4.0
 Requires:	python-PIL
@@ -41,6 +40,7 @@ rm -rf $RPM_BUILD_ROOT
 	--skip-build \
 	--root $RPM_BUILD_ROOT
 
+%{__rm} -r $RPM_BUILD_ROOT%{py_sitescriptdir}/%{module}/tests
 %{__rm} $RPM_BUILD_ROOT%{py_sitescriptdir}/%{module}_sphinxhelper.*
 
 install -d $RPM_BUILD_ROOT%{_mandir}/man1
