@@ -1,6 +1,6 @@
 %define 	module	blockdiag
 Summary:	Blockdiag generate block-diagram image file from spec-text file
-Name:		python-%module
+Name:		python-%{module}
 Version:	0.9.4
 Release:	1
 License:	Apache v2.0
