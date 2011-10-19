@@ -13,7 +13,6 @@ BuildRequires:	sed >= 4.0
 Requires:	python-PIL
 Requires:	python-devel-tools
 Requires:	python-funcparserlib
-Requires:	python-setuptools
 Requires:	python-webcolors >= 1.3.1
 BuildArch:	noarch
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
