@@ -11,7 +11,9 @@ Source0:	http://pypi.python.org/packages/source/b/%{module}/%{module}-%{version}
 BuildRequires:	rpmbuild(macros) >= 1.219
 BuildRequires:	sed >= 4.0
 Requires:	python-PIL
+%if "%{py_ver}" < "2.7"
 Requires:	python-ordereddict
+%endif
 Requires:	python-devel-tools
 Requires:	python-funcparserlib
 Requires:	python-webcolors >= 1.3.1
