@@ -1,0 +1,16 @@
+--- blockdiag-1.1.1/./src/blockdiag/utils/fontmap.py~	2011-11-19 18:33:54.000000000 +0200
++++ blockdiag-1.1.1/./src/blockdiag/utils/fontmap.py	2011-12-04 21:53:52.812019538 +0200
+@@ -18,7 +18,12 @@
+ import sys
+ import copy
+ import codecs
+-from ordereddict import OrderedDict
++try:
++    # py2.7
++    from collections import OrderedDict
++except ImportError:
++    # python-ordereddict
++    from ordereddict import OrderedDict
+ from ConfigParser import SafeConfigParser
+ from blockdiag.utils.collections import namedtuple
+ 

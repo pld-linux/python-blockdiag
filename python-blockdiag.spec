@@ -8,6 +8,7 @@ Group:		Development/Languages
 URL:		http://blockdiag.com/en/blockdiag/index.html
 Source0:	http://pypi.python.org/packages/source/b/%{module}/%{module}-%{version}.tar.gz
 # Source0-md5:	50d4af3c9bbde576255ff3c9543ac60f
+Patch0:		ordereddict.patch
 BuildRequires:	rpmbuild(macros) >= 1.219
 BuildRequires:	sed >= 4.0
 Requires:	python-PIL
@@ -29,6 +30,7 @@ Features:
 
 %prep
 %setup -q -n %{module}-%{version}
+%patch0 -p1
 %{__sed} -i -e 's/^from ez_setup/#from ez_setup/' setup.py
 %{__sed} -i -e 's/^use_setuptools()/#use_setuptools()/' setup.py
 
