@@ -14,8 +14,8 @@ Requires:	python-PIL
 %if "%{py_ver}" < "2.7"
 Requires:	python-ordereddict
 %endif
-Requires:	python-devel-tools
-Requires:	python-funcparserlib
+Requires:	python-funcparserlib >= 0.3.4
+Requires:	python-modules >= 2.4
 Requires:	python-webcolors >= 1.3.1
 BuildArch:	noarch
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
