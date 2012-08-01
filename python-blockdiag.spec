@@ -1,13 +1,13 @@
 %define 	module	blockdiag
 Summary:	Blockdiag generate block-diagram image file from spec-text file
 Name:		python-%{module}
-Version:	1.1.3
+Version:	1.1.6
 Release:	1
 License:	Apache v2.0
 Group:		Development/Languages
 URL:		http://blockdiag.com/en/blockdiag/index.html
 Source0:	http://pypi.python.org/packages/source/b/%{module}/%{module}-%{version}.tar.gz
-# Source0-md5:	2fde1e031e65ff2c3c351b512297d842
+# Source0-md5:	6057b077618df3b9f4c5a73910ddd736
 BuildRequires:	rpmbuild(macros) >= 1.219
 BuildRequires:	sed >= 4.0
 Requires:	python-PIL
