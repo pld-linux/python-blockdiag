@@ -2,7 +2,7 @@
 Summary:	Blockdiag generate block-diagram image file from spec-text file
 Name:		python-%{module}
 Version:	1.1.6
-Release:	1
+Release:	2
 License:	Apache v2.0
 Group:		Development/Languages
 URL:		http://blockdiag.com/en/blockdiag/index.html
