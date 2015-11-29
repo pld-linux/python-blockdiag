@@ -8,7 +8,7 @@ Group:		Development/Languages
 URL:		http://blockdiag.com/en/blockdiag/index.html
 Source0:	http://pypi.python.org/packages/source/b/%{module}/%{module}-%{version}.tar.gz
 # Source0-md5:	6057b077618df3b9f4c5a73910ddd736
-BuildRequires:	rpmbuild(macros) >= 1.219
+BuildRequires:	rpmbuild(macros) >= 1.710
 BuildRequires:	sed >= 4.0
 Requires:	python-PIL
 %if "%{py_ver}" < "2.7"
