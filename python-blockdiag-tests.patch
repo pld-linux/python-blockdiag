@@ -1,0 +1,17 @@
+--- blockdiag-1.5.4/src/blockdiag/tests/test_utils_fontmap.py.orig	2018-07-22 13:48:38.000000000 +0200
++++ blockdiag-1.5.4/src/blockdiag/tests/test_utils_fontmap.py	2021-02-06 12:31:08.863287467 +0100
+@@ -223,7 +223,13 @@
+         _config = u("[fontmap]\nsansserif: %s\nsansserif: %s\n") % \
+                   (self.fontpath[0], self.fontpath[1])
+         config = StringIO(_config)
+-        if sys.version_info[0] == 2:
++        has_configparser = False
++        try:
++            import configparser
++            has_configparser = True
++        except ImportError:
++            pass
++        if (sys.version_info[0] == 2) and not has_configparser:
+             fmap = FontMap(config)
+ 
+             font1 = fmap.find()
