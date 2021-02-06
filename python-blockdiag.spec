@@ -100,7 +100,7 @@ Funkcje:
 %if %{with tests}
 # disable tests requiring network: test_command.TestBlockdiagApp.test_app_cleans_up_images, test_generate_diagram.test_generate, test_generate_diagram.ghostscript_not_found_test
 PYTHONPATH=$(pwd)/src \
-nosetests-%{py_ver} src/blockdiag/tests -e 'test_app_cleans_up_images|test_generate\>|ghostscript_not_found_test'
+nosetests-%{py_ver} src/blockdiag/tests -e 'test_app_cleans_up_images|test_generate|ghostscript_not_found_test'
 %endif
 %endif
 
@@ -111,7 +111,7 @@ nosetests-%{py_ver} src/blockdiag/tests -e 'test_app_cleans_up_images|test_gener
 # disable tests requiring network: test_command.TestBlockdiagApp.test_app_cleans_up_images, test_generate_diagram.test_generate, test_generate_diagram.ghostscript_not_found_test
 # test_setup_inline_svg_is_true_with_multibytes fails on utf-8 vs latin-1 inconsistency
 PYTHONPATH=$(pwd)/src \
-nosetests-%{py3_ver} src/blockdiag/tests -e 'test_app_cleans_up_images|test_generate\>|ghostscript_not_found_test|test_setup_inline_svg_is_true_with_multibytes'
+nosetests-%{py3_ver} src/blockdiag/tests -e 'test_app_cleans_up_images|test_generate|ghostscript_not_found_test|test_setup_inline_svg_is_true_with_multibytes'
 %endif
 %endif
 
