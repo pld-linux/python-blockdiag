@@ -11,7 +11,7 @@ Summary(pl.UTF-8):	Generowanie obrazków diagramów blokowych z opisu tekstowego
 Name:		python-%{module}
 # keep 1.x here for python2 support
 Version:	1.5.4
-Release:	1
+Release:	2
 License:	Apache v2.0
 Group:		Libraries/Python
 #Source0Download: https://pypi.org/simple/blockdiag/
