@@ -27,6 +27,7 @@ BuildRequires:	python-ReportLab
 BuildRequires:	python-docutils
 BuildRequires:	python-funcparserlib
 BuildRequires:	python-nose
+BuildRequires:	python-nose_exclude
 BuildRequires:	python-pillow
 BuildRequires:	python-webcolors
 %if "%{py_ver}" < "2.7"
