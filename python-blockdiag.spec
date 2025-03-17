@@ -40,12 +40,12 @@ BuildRequires:	python-unittest2
 BuildRequires:	python3-modules >= 1:3.2
 BuildRequires:	python3-setuptools
 %if %{with tests}
-BuildRequires:	python3-ReportLab
 BuildRequires:	python3-docutils
 BuildRequires:	python3-funcparserlib
 BuildRequires:	python3-nose
 BuildRequires:	python3-nose_exclude
 BuildRequires:	python3-pillow
+BuildRequires:	python3-reportlab
 BuildRequires:	python3-webcolors
 %endif
 %endif
